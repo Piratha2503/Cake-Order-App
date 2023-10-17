@@ -1,0 +1,19 @@
+.topDiv{
+    height: 30px;
+    width: 100%;
+    font-size: 23px;
+    font-style:  rgb(255, 255, 255);
+    background-color: rgb(49, 45, 38);
+    color: aliceblue;
+    justify-content: center;
+    text-align: center;
+}
+.bg-body-tertiary{
+    height: 75px;
+    background-color: gainsboro;
+    align-items: center;
+}
+.howIt{
+    float: left;
+       
+}
