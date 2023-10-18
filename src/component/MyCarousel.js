@@ -11,14 +11,14 @@ function MyCarousel() {
     <div >
     <Carousel autoplay>
       <div>
-      <img src={img1} alt='img' style={{height:'600px', width:'100%'}}/>
-    </div>
-    <div>
-    <img src={img2} alt='img' style={{height:'600px', width:'100%'}}/>
-    </div>
-    <div>
-    <img src={img3} alt='img' style={{height:'600px', width:'100%'}}/>
-    </div>
+      <a><img src={img1} alt='img' style={{height:'600px', width:'100%'}}/></a>
+      </div>
+      <div>
+      <a><img src={img2} alt='img' style={{height:'600px', width:'100%'}}/></a>
+      </div>
+      <div>
+      <a><img src={img3} alt='img' style={{height:'600px', width:'100%'}}/></a>
+      </div>
    
     </Carousel>
     </div>
