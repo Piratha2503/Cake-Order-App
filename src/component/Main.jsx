@@ -8,6 +8,7 @@ import { StarOutlined, StarFilled, StarTwoTone } from "@ant-design/icons";
 import Delivery from "./delivery";
 import bakeryImage from "./images/bakery.jpg";
 import BuyNow from "./buyNow";
+import BestSeller from "./bestSeller";
 
 const MainView = () => {
   return (
@@ -63,6 +64,25 @@ const MainView = () => {
         </Row>
       </div>
         <BuyNow/>
+        <div className="howDiv  Sell">
+        <Row>
+          <div>
+            <h2 className="howItWork">_____</h2>
+          </div>
+          <div style={{ width: "40%" }}>
+            <h2 style={{ marginTop: "15%", marginLeft: "3%" }}>
+              {" "}
+              BEST SELLERS
+            </h2>
+          </div>
+          <div>
+            <h2 className="howItWork">_____</h2>
+          </div>
+        </Row>
+      </div>
+
+<BestSeller/>
+
       <MyFooter />
       </div>
       
