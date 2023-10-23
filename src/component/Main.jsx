@@ -9,7 +9,8 @@ import Delivery from "./delivery";
 import bakeryImage from "./images/bakery.jpg";
 import BuyNow from "./buyNow";
 import BestSeller from "./bestSeller";
-
+import FeatureProducts from "./featureProducts";
+import deliveryImage from './images/delivery.jpg';
 const MainView = () => {
   return (
    
@@ -45,7 +46,7 @@ const MainView = () => {
       </div>
       <Delivery />
       <div style={{ marginTop: "3%" }}>
-        <img src={bakeryImage} style={{ width: "100%", height: "600px" }}></img>
+        <img src={deliveryImage} style={{ width: "100%", height: "600px" }}></img>
       </div>
       <div className="howDiv  Shop">
         <Row>
@@ -82,7 +83,22 @@ const MainView = () => {
       </div>
 
 <BestSeller/>
-
+<Row style={{marginTop:'-3%'}}>
+          <div style={{marginLeft:'23%'}}>
+            <h2 className="howItWork" style={{marginLeft:'60%',marginTop:'-5%'}} >_____</h2>
+          </div>
+          <div style={{ width: "40%" }}>
+            <h2 style={{ marginTop: "5%", marginLeft: "13%", width:'58%' }}>
+              {" "}
+              FEATURE PRODUCTS
+            </h2>
+          </div>
+          <div>
+            <h2 className="howItWork" style={{marginLeft:'-150%',marginTop:'-5%'}} >_____</h2>
+          </div>
+        </Row>
+        <FeatureProducts/>
+      <img src={bakeryImage} style={{height:'600px', width:'100%'}}/>
       <MyFooter />
       </div>
       

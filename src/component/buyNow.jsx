@@ -19,9 +19,10 @@ function BuyNow() {
 </button>
 </div>
       <div className='buyNow' style={{backgroundImage:`url(${background3})`}}><h1>CUP CAKES</h1>
-      <button className='myBtn'> Buy Now
-</button></div>
+      <button className='myBtn'> Buy Now </button>
+      </div>
       </Row>
+    
     </div>
   )
 }
