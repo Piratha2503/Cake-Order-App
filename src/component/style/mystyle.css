@@ -39,7 +39,7 @@
     display: flex;
     justify-content: center;
 }
-.description{
+.deldescription{
     height: 60px;
     text-align: center;
 }
@@ -140,4 +140,33 @@ padding: 1%;
 height: 350px;
 width: 23%;
 margin-left: 1%;
+}
+.description{
+    height: auto;
+    width: 90%;
+    margin: 2%;
+}
+.descriptionText{
+    text-align: justify;
+    color: #155e11;
+}
+.deliver{ 
+    width:90%; 
+    height:auto;
+    margin-left: 3%;
+}
+.options{
+    height: 75px;
+    width: 30%;
+    border:1px solid rgb(35, 21, 67);
+    margin-left: 2%;
+    padding-top: 0.5%;
+    padding-left: 3%;
+}
+.logos{
+    border: 1px solid rgb(35, 21, 67);
+    background-color:  rgb(35, 21, 67);
+    width: 20%;
+    height: 60px;
+    border-radius: 70px;
 }

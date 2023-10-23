@@ -5,12 +5,17 @@ import "./style/mystyle.css";
 import TabTop from "./TabTop";
 import { Col, Row, Divider } from "antd";
 import { StarOutlined, StarFilled, StarTwoTone } from "@ant-design/icons";
-import Delivery from "./delivery";
+import Delivery,{Testing} from "./delivery";
 import bakeryImage from "./images/bakery.jpg";
 import BuyNow from "./buyNow";
 import BestSeller from "./bestSeller";
 import FeatureProducts from "./featureProducts";
 import deliveryImage from './images/delivery.jpg';
+import Text from "./description";
+import DeliverOptions from "./deliverOptions";
+import Faqs from "./faqs";
+import RecentEvents from "./recentEvents";
+
 const MainView = () => {
   return (
    
@@ -58,6 +63,7 @@ const MainView = () => {
               {" "}
               SHOP BY CATEGORY
             </h2>
+            <br/>
           </div>
           <div>
             <h2 className="howItWork">_____</h2>
@@ -66,13 +72,13 @@ const MainView = () => {
       </div>
         <BuyNow/>
         <div className="howDiv  Sell">
+        <br/>
         <Row>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
           <div style={{ width: "40%" }}>
             <h2 style={{ marginTop: "15%", marginLeft: "3%" }}>
-              {" "}
               BEST SELLERS
             </h2>
           </div>
@@ -83,13 +89,14 @@ const MainView = () => {
       </div>
 
 <BestSeller/>
+<br/>
 <Row style={{marginTop:'-3%'}}>
           <div style={{marginLeft:'23%'}}>
             <h2 className="howItWork" style={{marginLeft:'60%',marginTop:'-5%'}} >_____</h2>
           </div>
           <div style={{ width: "40%" }}>
             <h2 style={{ marginTop: "5%", marginLeft: "13%", width:'58%' }}>
-              {" "}
+             
               FEATURE PRODUCTS
             </h2>
           </div>
@@ -99,7 +106,28 @@ const MainView = () => {
         </Row>
         <FeatureProducts/>
       <img src={bakeryImage} style={{height:'600px', width:'100%'}}/>
-      <MyFooter />
+      <Text/>
+      <br/>
+      <DeliverOptions/>
+      <br/>
+      <br/>
+      <Row style={{marginTop:'-3%'}}>
+          <div style={{marginLeft:'28%'}}>
+            <h2 className="howItWork" style={{marginLeft:'60%',marginTop:'-5%'}} >_____</h2>
+          </div>
+          <div style={{ width: "40%" }}>
+            <h2 style={{ marginTop: "5%", marginLeft: "13%", width:'45%' }}>
+              RECENT POSTS
+            </h2>
+          </div>
+          <div>
+            <h2 className="howItWork" style={{marginLeft:'-235%',marginTop:'-5%'}} >_____</h2>
+          </div>
+        </Row>
+        <br/>
+       <RecentEvents/>
+       <Faqs/>
+      <MyFooter/>
       </div>
       
   );
