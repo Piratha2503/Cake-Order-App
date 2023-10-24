@@ -49,24 +49,26 @@ const MainView = () => {
           </div>
         </Row>
       </div>
+      <br/>
       <Delivery />
       <div style={{ marginTop: "3%" }}>
         <img src={deliveryImage} style={{ width: "100%", height: "600px" }}></img>
       </div>
+      <br/>
       <div className="howDiv  Shop">
         <Row>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
           <div style={{ width: "40%" }}>
-            <h2 style={{ marginTop: "12%", marginLeft: "3%" }}>
+            <h2 style={{ marginTop: "10%", marginLeft: "4%" }}>
               {" "}
               SHOP BY CATEGORY
             </h2>
             <br/>
           </div>
           <div>
-            <h2 className="howItWork">_____</h2>
+            <h2 className="howItWork" style={{marginLeft:'-35%'}}>_____</h2>
           </div>
         </Row>
       </div>
@@ -83,25 +85,24 @@ const MainView = () => {
             </h2>
           </div>
           <div>
-            <h2 className="howItWork">_____</h2>
+            <h2 className="howItWork" style={{marginLeft: "-25%"}}>_____</h2>
           </div>
         </Row>
       </div>
-
+<br/>
 <BestSeller/>
 <br/>
 <Row style={{marginTop:'-3%'}}>
-          <div style={{marginLeft:'23%'}}>
+          <div style={{marginLeft:'28%'}}>
             <h2 className="howItWork" style={{marginLeft:'60%',marginTop:'-5%'}} >_____</h2>
           </div>
           <div style={{ width: "40%" }}>
             <h2 style={{ marginTop: "5%", marginLeft: "13%", width:'58%' }}>
-             
               FEATURE PRODUCTS
             </h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-150%',marginTop:'-5%'}} >_____</h2>
+            <h2 className="howItWork" style={{marginLeft:'-210%',marginTop:'-5%'}} >_____</h2>
           </div>
         </Row>
         <FeatureProducts/>
@@ -121,7 +122,7 @@ const MainView = () => {
             </h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-235%',marginTop:'-5%'}} >_____</h2>
+            <h2 className="howItWork" style={{marginLeft:'-285%',marginTop:'-5%'}} >_____</h2>
           </div>
         </Row>
         <br/>

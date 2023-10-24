@@ -20,6 +20,7 @@
 .howItWork{
     color: rgb(208, 13, 13);
     font-size: 50px;
+
 }
 .howDiv{
    margin-top: -1%;
@@ -44,7 +45,7 @@
     text-align: center;
 }
 .Shop{
-    margin-left: 30%;
+    margin-left: 35%;
     width: 60%;
 }
 .buyNow{
