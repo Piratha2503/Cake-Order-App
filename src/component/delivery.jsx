@@ -4,8 +4,7 @@
   import './style/mystyle.css'
   import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
   import { faBirthdayCake,faCalendarDays,faTruckFast,faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Row } from 'antd';
-
+  import { Row } from 'antd';
 
   function Delivery() {
       
@@ -19,11 +18,11 @@ import { Row } from 'antd';
         <div className='delivery'><a><FontAwesomeIcon icon={faTruckFast} style={{color: "#df1616",height:'200px',width:'50%',marginLeft:'30%',marginTop:'-12%'}} /></a></div>
         </Row>
         <Row>
-        <div className='delivery description'><a><h4>Select Your Cake</h4></a></div>
-        <div className='delivery description' style={{width:'5%'}}></div>
-        <div className='delivery description'><a><h4>Choose your delivery date and time window</h4></a></div>
-        <div className='delivery description' style={{width:'5%'}}></div>
-        <div className='delivery description'><a><h4>A friendly Cake Run driver delivers your cake</h4></a></div>
+        <div className='delivery deldescription'><a><h4>Select Your Cake</h4></a></div>
+        <div className='delivery deldescription' style={{width:'5%'}}></div>
+        <div className='delivery deldescription'><a><h4>Choose your delivery date and time window</h4></a></div>
+        <div className='delivery deldescription' style={{width:'5%'}}></div>
+        <div className='delivery deldescription'><a><h4>A friendly Cake Run driver delivers your cake</h4></a></div>
         </Row>
       </div>
     )
