@@ -20,7 +20,7 @@ const MainView = () => {
   return (
    
     <div>
-      <div className="topDiv">Welcome to my Cake Order Website</div>
+      <div className="topDiv">Online Ordering Website</div>
       <TabTop />
       <MyCarousel />
       <div className="review">
@@ -127,7 +127,9 @@ const MainView = () => {
         <br/>
        <RecentEvents/>
        <Faqs/>
+       <br/>
       <MyFooter/>
+      <br/>
       </div>
       
   );

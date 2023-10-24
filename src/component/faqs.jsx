@@ -8,7 +8,7 @@ const text = `
 const items = [
   {
     key: '1',
-    label: 'This is panel header 1',
+    label: 'Can I Cancel My Orders',
     children: <p>{text}</p>,
   },
   {
@@ -18,6 +18,26 @@ const items = [
   },
   {
     key: '3',
+    label: 'This is panel header 3',
+    children: <p>{text}</p>,
+  },
+  {
+    key: '4',
+    label: 'This is panel header 3',
+    children: <p>{text}</p>,
+  },
+  {
+    key: '5',
+    label: 'This is panel header 3',
+    children: <p>{text}</p>,
+  },
+  {
+    key: '6',
+    label: 'This is panel header 3',
+    children: <p>{text}</p>,
+  },
+  {
+    key: '7',
     label: 'This is panel header 3',
     children: <p>{text}</p>,
   },
