@@ -1,7 +1,6 @@
   import React from 'react'
   import { FaCake } from 'react-icons/fa';
   import cakes from './imgs/cake.png'
-
   import './style/mystyle.css'
   import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
   import { faBirthdayCake,faCalendarDays,faTruckFast,faChevronRight } from '@fortawesome/free-solid-svg-icons';
