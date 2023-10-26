@@ -11,41 +11,42 @@ function FeatureProducts() {
   return (
     <div className='FeatureProduct'>
       <Row>
-      <div className='FeatureProducts'><img src={product4} style={{height:'60%', width:'100%'}}>
+      <div className='card FeatureProducts'><img className='fpimg' src={product4} >
       </img>
-      <div style={{height:'40%', width:'100%',paddingLeft:'25%', paddingTop:'5%'}}>
+      <div style={{height:'40%', width:'100%',paddingLeft:'2%', paddingTop:'5%'}}>
       <h6>Strawberry Cake</h6>
-      <h3 style={{marginLeft:'20%',color:'green'}}> $39 </h3>
+      <h3 style={{marginLeft:'2%',color:'green'}}> $39 </h3>
       <Rate allowHalf defaultValue={1.5} style={{marginTop:'1%'}}/>
       </div>
       </div>
-      <div className='FeatureProducts'>
-      <img src={product3} style={{height:'60%', width:'100%'}}></img>
-      <div style={{height:'40%', width:'100%',paddingLeft:'20%', paddingTop:'5%'}}>
+      <div className='card FeatureProducts'>
+      <img src={product3} className='fpimg'></img>
+      <div style={{height:'40%', width:'100%',paddingLeft:'1%', paddingTop:'5%'}}>
       <h6> Dark Chocolate Cake</h6>
-      <h3 style={{marginLeft:'20%',color:'green'}}> $39 </h3>
+      <h3 style={{color:'green'}}> $39 </h3>
       <Rate allowHalf defaultValue={3.25} style={{marginLeft:'1%',marginTop:'1%'}}/>
       </div>
       </div>
-      <div className='FeatureProducts'>
-      <img src={product2} style={{height:'60%', width:'100%'}}></img>
-      <div style={{height:'40%', width:'100%',paddingLeft:'15%', paddingTop:'5%'}}>
+      <div className='card FeatureProducts'>
+      <img src={product2} className='fpimg'></img>
+      <div style={{height:'40%', width:'100%', paddingTop:'5%'}}>
       <h6> Vanilla & Pineapple Cake</h6>
-      <h3 style={{marginLeft:'25%',color:'green'}}> $39 </h3>
-      <Rate allowHalf defaultValue={2.5} style={{marginLeft:'7%',marginTop:'1%'}}/>
+      <h3 style={{color:'green'}}> $39 </h3>
+      <Rate allowHalf defaultValue={2.5} style={{marginTop:'1%'}}/>
       </div>
       </div>
-      <div className='FeatureProducts'>
-      <img src={product1} style={{height:'60%', width:'100%'}}></img>
+      <div className='card FeatureProducts'>
+      <img src={product1} className='fpimg'></img>
       <div style={{height:'40%', width:'100%',paddingLeft:'5%', paddingTop:'5%'}}>
       <h6> Vanilla Sponge & Raspberry Cake</h6>
-      <h3 style={{marginLeft:'35%',color:'green'}}> $39 </h3>
-      <Rate allowHalf defaultValue={1.5} style={{marginLeft:'20%',marginTop:'1%'}}/>
+      <h3 style={{marginLeft:'5%',color:'green'}}> $39 </h3>
+      <Rate allowHalf defaultValue={1.5} style={{marginLeft:'10%',marginTop:'1%'}}/>
       </div>
       </div>
       </Row>
+      
     </div>
   )
 }
-
+//https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=20
 export default FeatureProducts;

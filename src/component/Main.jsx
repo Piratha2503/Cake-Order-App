@@ -68,7 +68,7 @@ const MainView = () => {
             <br/>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-35%'}}>_____</h2>
+            <h2 className="howItWork" style={{marginLeft:'-10%'}}>_____</h2>
           </div>
         </Row>
       </div>
@@ -85,7 +85,7 @@ const MainView = () => {
             </h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft: "-25%"}}>_____</h2>
+            <h2 className="howItWork" style={{marginLeft: "-5%"}}>_____</h2>
           </div>
         </Row>
       </div>
@@ -102,10 +102,11 @@ const MainView = () => {
             </h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-210%',marginTop:'-5%'}} >_____</h2>
+            <h2 className="howItWork" style={{marginLeft:'-155%',marginTop:'-5%'}} >_____</h2>
           </div>
         </Row>
         <FeatureProducts/>
+        <br/>
       <img src={bakeryImage} style={{height:'600px', width:'100%'}}/>
       <Text/>
       <br/>
@@ -122,7 +123,7 @@ const MainView = () => {
             </h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-285%',marginTop:'-5%'}} >_____</h2>
+            <h2 className="howItWork" style={{marginLeft:'-235%',marginTop:'-5%'}} >_____</h2>
           </div>
         </Row>
         <br/>
@@ -130,7 +131,9 @@ const MainView = () => {
        <Faqs/>
        <br/>
       <MyFooter/>
-      <br/>
+      <footer style={{fontWeight:'bold',backgroundColor:'#edebe6',position:'relative',paddingLeft:'35%',marginTop:'2%'}}>
+      <h6>COPYRIGHT 2023 © ALL RIGHTS RESERVED BY PIRATHA-TECH PVT LTD</h6>
+      </footer>
       </div>
       
   );
