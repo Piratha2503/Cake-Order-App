@@ -330,7 +330,7 @@ margin-left: 1%;
   }
   
   .card:hover {
-    border: 1px solid black;
+    box-shadow: #0b17c2;
     transform: scale(1.05);
   }
   
@@ -344,4 +344,15 @@ margin-left: 1%;
     background: #e0e0e0;
     box-shadow: 20px 20px 60px #bebebe,
                   -20px -20px 60px #ffffff;
+   }
+   .paging{
+    display: flex;
+    justify-content: center;
+   }
+   .paginate{
+    color: #0b17c2;
+    font-size: large;
+    border: 1px groove white;
+    border-radius: 10px;
+
    }

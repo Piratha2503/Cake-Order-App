@@ -5,9 +5,10 @@ import TopBar from "./component/TopBar";
 function App() {
   return (
     <>
-      <TopBar/>
+    <MainView/>
+     
       </>
   );
 }
-//<MainView/>
+// <TopBar/>
 export default App;
