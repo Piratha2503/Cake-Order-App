@@ -1,15 +1,15 @@
 import {Pagination} from 'antd';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import '../style/Style.css';
+import { Button } from 'react-bootstrap';
 
-function TopBar() {
+function Products() {
   const [images,setImages] = useState([]);
   const [Num, setNum] =useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5;
-  
-
-  
+   
     const showImages = async(num)=>{
 
       const pagenum = num *10;
@@ -22,35 +22,38 @@ function TopBar() {
 showImages(1)
 }
 ,[currentPage]);
-const handlePageChange = (page) => {
-  setCurrentPage(page);
-};
-const paging = ()=>{
-  for (let index = 0; index < images.length; index++) {
-        //return(<Pagination.Item>{index}</Pagination.Item>)
-        console.log(index)
-  }
-}
+console.log(images);
   return (
-    <div >
-    <div style={{display:'flex',flexWrap:'wrap',rowGap:'1em',columnGap:'1em',padding:'2%'}}>
+    <div className='proDisplay'>
+    <div className='imgDisplay'>
     {images.map((myimage,index)=>(
+      <div className='imgDis'>
       
-      <img
+      <div className="flip-card">
+    <div className="flip-card-inner">
+        <div className="flip-card-front">
+        <img className='images'
       key={index}
       src={myimage.url}
       alt={myimage.altText}
-      style={{width: '200px', height: '200px'}}
       />
-      
+      <h3> ${myimage.user} </h3>
+        </div>
+        <div className="flip-card-back">
+        <Button className='btn btn-warning'> Buy Now </Button>
+        </div>
+    </div>
+</div>
+      </div>
      ))
     }
-     </div>
-     <div className='paging'>
+    <div className='paging'>
      <Pagination className='paginate' onChange={(numb)=>showImages(numb)} defaultCurrent={1} total={50} />
      </div>
+     </div>
+     
     </div>
   )
 }
 //
-export default TopBar
+export default Products

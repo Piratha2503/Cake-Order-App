@@ -1,14 +1,12 @@
 import React from "react";
 import MainView from "./component/Main";
-import TopBar from "./component/TopBar";
+import ProductMainPage from "./component/products/ProductMainPage";
 
 function App() {
   return (
-    <>
-    <MainView/>
-     
-      </>
+    
+    <ProductMainPage/>
   );
 }
-// <TopBar/>
+// <MainView/>
 export default App;

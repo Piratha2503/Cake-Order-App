@@ -8,6 +8,14 @@
     justify-content: center;
     text-align: center;
 }
+.me-auto{
+  display: flex;
+  justify-content: space-evenly;
+}
+.myContainer{
+display: flex;
+justify-content: center;
+}
 .bg-body-tertiary{
     height: 75px;
     background-color: gainsboro;
@@ -25,7 +33,6 @@
 .howDiv{
    margin-top: -1%;
    width: 40%;
-   margin-left: 33.25%;
    
 }
 .review{
@@ -45,7 +52,6 @@
     text-align: center;
 }
 .Shop{
-    margin-left: 35%;
     width: 60%;
 }
 .buyNow{
@@ -350,9 +356,10 @@ margin-left: 1%;
     justify-content: center;
    }
    .paginate{
-    color: #0b17c2;
+    color: #be0c1e;
     font-size: large;
     border: 1px groove white;
     border-radius: 10px;
+    position: relative;
 
    }

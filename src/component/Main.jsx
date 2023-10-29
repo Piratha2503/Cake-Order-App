@@ -56,19 +56,18 @@ const MainView = () => {
       </div>
       <br/>
       <div className="howDiv  Shop">
-        <Row>
+        <Row style={{display:'flex',justifyContent:'center'}}>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
           <div style={{ width: "40%" }}>
-            <h2 style={{ marginTop: "10%", marginLeft: "4%" }}>
-              {" "}
+            <h2 style={{ marginTop: "10%"}}>
               SHOP BY CATEGORY
             </h2>
             <br/>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-10%'}}>_____</h2>
+            <h2 className="howItWork" style={{}}>_____</h2>
           </div>
         </Row>
       </div>
