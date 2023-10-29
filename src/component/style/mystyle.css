@@ -12,6 +12,8 @@
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  color: #151b6e;
+  font-weight: bold;
 }
 .myContainer{
 display: flex;
@@ -33,7 +35,10 @@ justify-content: space-around;
 }
 .howDiv{
    margin-top: -1%;
-   width: 40%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
    
 }
 .review{

@@ -11,8 +11,8 @@ function TabTop() {
         <Navbar.Brand href="#home"><img src={logo} style={{height:'50px',width:'200px'}}></img></Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" style={{fontSize:'25px'}}> Home </Nav.Link>
-            <Nav.Link href="#link" style={{ fontSize:'25px'}}>Designs</Nav.Link>
+            <Nav.Link href="/" style={{fontSize:'25px'}}> Home </Nav.Link>
+            <Nav.Link href="/products" style={{ fontSize:'25px'}}>Designs</Nav.Link>
             <Nav.Link href="#link" style={{ fontSize:'25px'}}>Orders</Nav.Link>
             <Nav.Link href="#link" style={{ fontSize:'25px'}}>Occasions</Nav.Link>
             <NavDropdown title="About Us" style={{ fontSize:'25px'}} id="basic-nav-dropdown">

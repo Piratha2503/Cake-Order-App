@@ -36,8 +36,9 @@ const MainView = () => {
         </span>
         <span>Trustpilot</span>
       </div>
+      <br/>
       <div className="howDiv">
-        <Row>
+        <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
@@ -49,83 +50,78 @@ const MainView = () => {
           </div>
         </Row>
       </div>
-      <br/>
+      
       <Delivery />
       <div style={{ marginTop: "3%" }}>
         <img src={deliveryImage} style={{ width: "100%", height: "600px" }}></img>
       </div>
+    
+      <div className="howDiv">
+        <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
+          <div>
+            <h2 className="howItWork">_____</h2>
+          </div>
+          <div>
+            <h2 style={{ marginTop: "12%" }}> SHOP BY CATEGORY</h2>
+          </div>
+          <div>
+            <h2 className="howItWork">_____</h2>
+          </div>
+        </Row>
+      </div>
       <br/>
-      <div className="howDiv  Shop">
-        <Row style={{display:'flex',justifyContent:'center'}}>
-          <div>
-            <h2 className="howItWork">_____</h2>
-          </div>
-          <div style={{ width: "40%" }}>
-            <h2 style={{ marginTop: "10%"}}>
-              SHOP BY CATEGORY
-            </h2>
-            <br/>
-          </div>
-          <div>
-            <h2 className="howItWork" style={{}}>_____</h2>
-          </div>
-        </Row>
-      </div>
         <BuyNow/>
-        <div className="howDiv  Sell">
         <br/>
-        <Row>
+        <div className="howDiv">
+        <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
-          <div style={{ width: "40%" }}>
-            <h2 style={{ marginTop: "15%", marginLeft: "3%" }}>
-              BEST SELLERS
-            </h2>
+          <div>
+            <h2 style={{ marginTop: "16%" }}> BEST SELLERS</h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft: "-5%"}}>_____</h2>
+            <h2 className="howItWork">_____</h2>
           </div>
         </Row>
       </div>
-<br/>
 <BestSeller/>
-<br/>
-<Row style={{marginTop:'-3%'}}>
-          <div style={{marginLeft:'28%'}}>
-            <h2 className="howItWork" style={{marginLeft:'60%',marginTop:'-5%'}} >_____</h2>
-          </div>
-          <div style={{ width: "40%" }}>
-            <h2 style={{ marginTop: "5%", marginLeft: "13%", width:'58%' }}>
-              FEATURE PRODUCTS
-            </h2>
+<div className="howDiv">
+        <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
+          <div>
+            <h2 className="howItWork">_____</h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-155%',marginTop:'-5%'}} >_____</h2>
+            <h2 style={{ marginTop: "12%" }}> FEATURE PRODUCTS</h2>
+          </div>
+          <div>
+            <h2 className="howItWork">_____</h2>
           </div>
         </Row>
+      </div>
         <FeatureProducts/>
+        <br/>
+        <br/>
         <br/>
       <img src={bakeryImage} style={{height:'600px', width:'100%'}}/>
       <Text/>
       <br/>
       <DeliverOptions/>
+      
       <br/>
-      <br/>
-      <Row style={{marginTop:'-3%'}}>
-          <div style={{marginLeft:'28%'}}>
-            <h2 className="howItWork" style={{marginLeft:'60%',marginTop:'-5%'}} >_____</h2>
-          </div>
-          <div style={{ width: "40%" }}>
-            <h2 style={{ marginTop: "5%", marginLeft: "13%", width:'45%' }}>
-              RECENT POSTS
-            </h2>
+      <div className="howDiv">
+        <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
+          <div>
+            <h2 className="howItWork">_____</h2>
           </div>
           <div>
-            <h2 className="howItWork" style={{marginLeft:'-235%',marginTop:'-5%'}} >_____</h2>
+            <h2 style={{ marginTop: "15%" }}> RECENT POSTS</h2>
+          </div>
+          <div>
+            <h2 className="howItWork">_____</h2>
           </div>
         </Row>
-        <br/>
+      </div>
        <RecentEvents/>
        <Faqs/>
        <br/>

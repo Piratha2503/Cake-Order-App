@@ -1,59 +1,54 @@
-import {Pagination} from 'antd';
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { Pagination } from 'antd';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import '../style/Style.css';
 import { Button } from 'react-bootstrap';
 
 function Products() {
-  const [images,setImages] = useState([]);
-  const [Num, setNum] =useState(1);
+  const [images, setImages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 5;
-   
-    const showImages = async(num)=>{
+  const pageSize = 10;
 
-      const pagenum = num *10;
-        const resulst = await axios.get(`https://api.slingacademy.com/v1/sample-data/photos?offset=${pagenum}&limit=10`);
-        setImages(resulst.data.photos);
-        setNum(resulst.data.photos);  
-    }
-    
-    useEffect(()=>{
-showImages(1)
-}
-,[currentPage]);
-console.log(images);
+  const showImages = async (num) => {
+    const pagenum = num * pageSize;
+    const response = await axios.get(`https://api.slingacademy.com/v1/sample-data/photos?offset=${pagenum}&limit=${pageSize}`);
+    setImages(response.data.photos);
+    setCurrentPage(num);
+  };
+
+
+  useEffect(() => {
+   
+    showImages(currentPage); // Load images when the component mounts
+  }, []);
   return (
     <div className='proDisplay'>
-    <div className='imgDisplay'>
-    {images.map((myimage,index)=>(
-      <div className='imgDis'>
-      
-      <div className="flip-card">
-    <div className="flip-card-inner">
-        <div className="flip-card-front">
-        <img className='images'
-      key={index}
-      src={myimage.url}
-      alt={myimage.altText}
-      />
-      <h3> ${myimage.user} </h3>
+      <div className='imgDisplay'>
+        {images.map((myimage, index) => (
+          <div className='imgDis' key={index}>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <img
+                    className='images'
+                    src={myimage.url}
+                    alt={myimage.altText}
+                  />
+                  <h1 style={{ fontWeight: 'bold' }}> ${myimage.user} </h1>
+                </div>
+                <div className="flip-card-back">
+                  <Button variant="outline-danger" className='buy'>Buy Now</Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+        <div className='paging'>
+          <Pagination className='paginate' onChange={(current) => showImages(current)} defaultCurrent={1} total={50} />
         </div>
-        <div className="flip-card-back">
-        <Button className='btn btn-warning'> Buy Now </Button>
-        </div>
-    </div>
-</div>
       </div>
-     ))
-    }
-    <div className='paging'>
-     <Pagination className='paginate' onChange={(numb)=>showImages(numb)} defaultCurrent={1} total={50} />
-     </div>
-     </div>
-     
     </div>
-  )
+  );
 }
-//
-export default Products
+
+export default Products;

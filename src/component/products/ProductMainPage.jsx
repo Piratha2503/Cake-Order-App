@@ -7,6 +7,8 @@ import SideMenu from './SideMenu'
 
 function ProductMainPage() {
   return (
+    <div>
+    <div className="topDiv">Online Ordering Website</div>
     <div style={{display:'flex',flexDirection:'column',rowGap:'2em'}}>
     <TabTop/>
     <div>
@@ -21,6 +23,7 @@ function ProductMainPage() {
       <Faqs/>
       </div>
       <Myfooter/>
+    </div>
     </div>
   )
 }
