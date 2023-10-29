@@ -11,10 +11,11 @@
 .me-auto{
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 }
 .myContainer{
 display: flex;
-justify-content: center;
+justify-content: space-around;
 }
 .bg-body-tertiary{
     height: 75px;

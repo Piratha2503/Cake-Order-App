@@ -7,9 +7,8 @@ import SideMenu from './SideMenu'
 
 function ProductMainPage() {
   return (
-    <div style={{display:'flex',flexDirection:'column',rowGap:'1em'}}>
+    <div style={{display:'flex',flexDirection:'column',rowGap:'2em'}}>
     <TabTop/>
-    <br/>
     <div>
     <div style={{float:'left', width:'20%'}}>
     <SideMenu/>
@@ -21,7 +20,6 @@ function ProductMainPage() {
       <div>
       <Faqs/>
       </div>
-      <br/>
       <Myfooter/>
     </div>
   )

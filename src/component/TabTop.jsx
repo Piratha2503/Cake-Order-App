@@ -8,15 +8,14 @@ function TabTop() {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
       <Container className='myContainer'>
-        <Navbar.Brand href="#home" style={{marginLeft:'20%'}}><img src={logo} style={{height:'50px',width:'200px'}}></img></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand href="#home"><img src={logo} style={{height:'50px',width:'200px'}}></img></Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" style={{marginLeft:'1%', fontSize:'25px'}}> Home </Nav.Link>
-            <Nav.Link href="#link" style={{marginLeft:'1%', fontSize:'25px'}}>Designs</Nav.Link>
-            <Nav.Link href="#link" style={{marginLeft:'1%', fontSize:'25px'}}>Orders</Nav.Link>
-            <Nav.Link href="#link" style={{marginLeft:'1%', fontSize:'25px'}}>Occasions</Nav.Link>
-            <NavDropdown title="About Us" id="basic-nav-dropdown" style={{marginLeft:'5%'}}>
+            <Nav.Link href="#home" style={{fontSize:'25px'}}> Home </Nav.Link>
+            <Nav.Link href="#link" style={{ fontSize:'25px'}}>Designs</Nav.Link>
+            <Nav.Link href="#link" style={{ fontSize:'25px'}}>Orders</Nav.Link>
+            <Nav.Link href="#link" style={{ fontSize:'25px'}}>Occasions</Nav.Link>
+            <NavDropdown title="About Us" style={{ fontSize:'25px'}} id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -27,8 +26,8 @@ function TabTop() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link" style={{marginLeft:'5%',fontSize:'30px'}}><i className="bi bi-person-fill"></i></Nav.Link>
-            <Nav.Link href="#link" style={{marginLeft:'12%', fontSize:'25px', color:'red'}}><i className="bi bi-cart"></i></Nav.Link>
+            <Nav.Link href="#link" style={{fontSize:'30px'}}><i className="bi bi-person-fill"></i></Nav.Link>
+            <Nav.Link href="#link" style={{fontSize:'25px', color:'red'}}><i className="bi bi-cart"></i></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
