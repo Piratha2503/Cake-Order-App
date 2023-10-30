@@ -11,11 +11,11 @@ function ProductMainPage() {
     <div className="topDiv">Online Ordering Website</div>
     <div style={{display:'flex',flexDirection:'column',rowGap:'2em'}}>
     <TabTop/>
-    <div>
+    <div style={{display:'flex',justifyContent:'space-between'}}>
     <div style={{float:'left', width:'20%'}}>
     <SideMenu/>
     </div>
-    <div style={{width:'95%', marginLeft:'-1%'}}>
+    <div style={{width:'100%',}}>
       <Products/>
       </div>
     </div>

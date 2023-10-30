@@ -22,7 +22,7 @@ function Products() {
     showImages(currentPage); // Load images when the component mounts
   }, []);
   return (
-    <div className='proDisplay'>
+    <div className='proDisplay' >
       <div className='imgDisplay'>
         {images.map((myimage, index) => (
           <div className='imgDis' key={index}>
