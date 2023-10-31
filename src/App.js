@@ -1,10 +1,11 @@
 import React from "react";
+import Main from "./components/Main";
 
 
 function App() {
   return (
-    <h1>Server side app</h1>
+    <Main/>
   );
 }
-
+//
 export default App;
