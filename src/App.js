@@ -1,11 +1,9 @@
 import React from "react";
-import MainView from "./component/Main";
+
 
 function App() {
   return (
-    <>
-      <MainView/>
-      </>
+    <h1>Server side app</h1>
   );
 }
 
