@@ -30,10 +30,9 @@ const items = [
   ]),
   getItem('Orders', '2', <DesktopOutlined />),
   getItem('Clients', '3', <ContainerOutlined />),
-  getItem('Option 3', '3', <ContainerOutlined />),
   getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
+  getItem('Option 9', '9'),
+  getItem('Option 10', '10'),
   ]),
 ];
 const SideBar = () => {
