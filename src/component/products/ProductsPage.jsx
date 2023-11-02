@@ -16,10 +16,9 @@ function Products() {
     setCurrentPage(num);
   };
 
-
   useEffect(() => {
    
-    showImages(currentPage); // Load images when the component mounts
+    showImages(currentPage); 
   }, []);
   return (
     <div className='proDisplay' >
