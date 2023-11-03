@@ -11,8 +11,9 @@ function Products() {
 
   const showImages = async (num) => {
     const pagenum = num * pageSize;
-    const response = await axios.get(`https://api.slingacademy.com/v1/sample-data/photos?offset=${pagenum}&limit=${pageSize}`);
-    setImages(response.data.photos);
+    const response = await axios.get(`http://localhost:8095/cake-orders/img`);
+    setImages(response.data);
+   
     setCurrentPage(num);
   };
 
@@ -20,6 +21,10 @@ function Products() {
    
     showImages(currentPage); 
   }, []);
+  for (let index = 0; index < images.length; index++) {
+    console.log(images[index].imgPath)
+    
+  }
   return (
     <div className='proDisplay' >
       <div className='imgDisplay'>
@@ -30,10 +35,10 @@ function Products() {
                 <div className="flip-card-front">
                   <img
                     className='images'
-                    src={myimage.url}
+                    src= "file:///D:/Final Projects/image1.jpg"
                     alt={myimage.altText}
                   />
-                  <h1 style={{ fontWeight: 'bold' }}> ${myimage.user} </h1>
+                  <h3 style={{ fontWeight: 'bold' }}> {myimage.price}/- </h3>
                 </div>
                 <div className="flip-card-back">
                   <Button variant="outline-danger" className='buy'>Buy Now</Button>
