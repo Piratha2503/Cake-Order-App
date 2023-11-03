@@ -5,6 +5,7 @@ import com.ii.testautomation.DTO.Responses.OrdersResponse;
 import com.ii.testautomation.Services.DesignService;
 import com.ii.testautomation.utils.EndpointURI;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -33,8 +34,13 @@ public class DesignsController {
     }
 
     @GetMapping("img")
-    public ResponseEntity<Object> viewImage() throws MalformedURLException {
+    public ResponseEntity<Object> viewAllImage() throws IOException {
             return ResponseEntity.ok(designService.viewAllImages());
+    }
+    @GetMapping("img/{name}")
+    public ResponseEntity<Object> viewImage(@PathVariable String name) throws IOException {
+        return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG)
+                .body(designService.viewImage(name));
     }
 
 }

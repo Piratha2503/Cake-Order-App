@@ -9,6 +9,6 @@ import java.net.URL;
 public class DesignResponse {
     private Long id;
     private String name;
-    private String imgPath;
+    private String imgUrl;
     private Double price;
 }

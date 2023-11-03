@@ -3,13 +3,11 @@ package com.ii.testautomation.Services;
 
 import com.ii.testautomation.DTO.Requests.DesignRequest;
 import com.ii.testautomation.DTO.Responses.DesignResponse;
-import com.ii.testautomation.DTO.Responses.OrdersResponse;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.List;
 
 public interface DesignService {
@@ -18,7 +16,7 @@ public interface DesignService {
 
     void uploadImage(Long id, MultipartFile imageFile) throws URISyntaxException, IOException;
 
-    URL viewImage(Long id) throws MalformedURLException;
+    byte[] viewImage(String name) throws IOException;
 
-    List<DesignResponse> viewAllImages();
+    List<DesignResponse> viewAllImages() throws IOException;
 }
