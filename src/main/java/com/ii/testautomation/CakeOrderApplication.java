@@ -10,6 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableJpaAuditing
 @ComponentScan(basePackages = "com.ii.testautomation")
 @EnableScheduling
-public class InvictaTestAutomationProjectApplication {
-    public static void main(String[] args) { SpringApplication.run(InvictaTestAutomationProjectApplication.class, args);}
+public class CakeOrderApplication {
+    public static void main(String[] args) { SpringApplication.run(CakeOrderApplication.class, args);}
 }
