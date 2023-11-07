@@ -50,13 +50,9 @@ const Clients = () => {
   
   ];
   const [Customers, setCustomers] = useState([])
-  const [Pages, setPages] = useState(50)
-
   const getAllCustomers = async ()=>{
-    const getCustomers = await axios.get(`${Api()}/companyUsers?page=0&size=100&direction=DESC&sortField=updatedAt`);
-    setCustomers(getCustomers.data.result.companyUsers);
-   
-   
+    const getCustomers = await axios.get(`${Api()}/orders?page=0&size=3&direction=DESC&sortField=updatedAt`);
+    setCustomers(getCustomers.data.result.Orders);   
   };
 
 useEffect(()=>{ 

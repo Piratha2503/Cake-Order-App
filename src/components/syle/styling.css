@@ -43,3 +43,9 @@ flex-direction: column;
     display:flex;
     justify-content:space-evenly;
 }
+.sideMenu{
+    width: 108%;
+    display: flex;
+    flex-direction:column;
+    column-gap:2em;
+}

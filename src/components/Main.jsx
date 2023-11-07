@@ -23,7 +23,6 @@ function Main() {
     <MyFooter/>
     </div>
 
-
     </div>
 
   )

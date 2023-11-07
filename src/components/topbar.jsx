@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { AppstoreOutlined, MailOutlined, SettingOutlined,UserOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import './syle/styling.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserLarge } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = 'My Navigation Bar'
 
@@ -15,7 +17,7 @@ const items = [
   {
     label: 'User ',
     key: 'SubMenu',
-    icon: <UserOutlined />,
+    icon: <FontAwesomeIcon icon={faUserLarge} />,
     children: [
       {
         type: 'group',
