@@ -1,9 +1,10 @@
 .imgDisplay{
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     row-gap: 1em;
+    column-gap: 1em;
     width: 100%;
+    justify-content: center;
     
    
 }  

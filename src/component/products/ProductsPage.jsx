@@ -47,10 +47,11 @@ function Products() {
             </div>
           </div>
         ))}
-        <div className='paging'>
-          <Pagination className='paginate' onChange={(current) => showImages(current)} defaultCurrent={1} total={50} />
-        </div>
+       
       </div>
+      <div className='paging'>
+      <Pagination className='paginate' onChange={(current) => showImages(current)} defaultCurrent={1} total={50} />
+    </div>
     </div>
   );
 }
