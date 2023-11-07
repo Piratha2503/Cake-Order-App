@@ -35,7 +35,7 @@ function Products() {
                 <div className="flip-card-front">
                   <img
                     className='images'
-                    src= "file:///D:/Final Projects/image1.jpg"
+                    src= {myimage.imgUrl}
                     alt={myimage.altText}
                   />
                   <h3 style={{ fontWeight: 'bold' }}> {myimage.price}/- </h3>
