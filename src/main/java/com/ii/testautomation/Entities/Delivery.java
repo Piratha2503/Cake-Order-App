@@ -15,9 +15,10 @@ import javax.persistence.Id;
 public class Delivery extends DateAudit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long   id;
     private String receiverName;
     private String receiverAddress;
     private String receiverEmail;
-    private Long receiverContactNumber;
+    private Long   receiverContactNumber;
+    private String status;
 }
