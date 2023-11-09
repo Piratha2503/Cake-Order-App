@@ -3,7 +3,7 @@ import TopBar from './topbar'
 import './syle/styling.css'
 import MyFooter from './MyFooter'
 import SideBar from './SideBar'
-import { BrowserRouter as Router, Route, Routes,Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import MainContents from './MainContents'
 function Main() {
   return (
