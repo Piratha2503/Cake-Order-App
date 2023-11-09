@@ -6,9 +6,7 @@ import Designs from './contents/designs';
 
 function MainContents() {
   return (
-    
-    <Router>
-      <div>
+    <div>
         <Routes>
         <Route path="/" element={ <Orders/>} />
           <Route path="/clients" element={<div>
@@ -17,10 +15,12 @@ function MainContents() {
           <Route path="/designs" element={<div>
             <Designs/>
           </div>} />
+          <Route path="/designs/addnew" element={<div>
+            <Designs/>
+          </div>} />
         </Routes>
         
       </div>
-    </Router>
   )
 }
 

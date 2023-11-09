@@ -3,9 +3,12 @@
     width: 100%;
 }
 
-#sandc{ 
-
-    
+.contentWithAdd{
+display: flex;
+flex-direction: column;
+column-gap: 1%;
+height: 85vh;
+padding: 1%;
 }
 .topandcontent{
 height: auto;
@@ -48,4 +51,14 @@ flex-direction: column;
     display: flex;
     flex-direction:column;
     column-gap:2em;
+}
+.addButton{
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+    width: auto;
+}
+#temp{ 
+  border: 1px solid blue;
+  background-color: aquamarine;
 }

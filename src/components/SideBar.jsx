@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from './imgs/myLogo.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCakeCandles, faCommentDots, faElevator, faGlobe, faHouse, faListCheck, faPenNib, faPeopleCarryBox, faPeopleGroup, faUserGroup, faUserTag, } from '@fortawesome/free-solid-svg-icons'
+import { faCakeCandles, faCommentDots, faElevator, faGlobe, faHouse, faListCheck, faPeopleCarryBox, faPeopleGroup, faUserGroup, faUserTag, } from '@fortawesome/free-solid-svg-icons'
 
 import {
   AppstoreOutlined,
@@ -37,7 +37,7 @@ children:[{label:"Clients",key:'/clients',icon: <FontAwesomeIcon icon={faUserGro
 ];
 
 const SideBar = () => {
-
+  const navigate = useNavigate();
   return (
     <div
       className='sideMenu'>
@@ -48,7 +48,7 @@ const SideBar = () => {
         mode="inline"
         theme="dark"
         items={items}
-        
+       onClick={(item)=>navigate(item.key)}
       />
     </div>
   );

@@ -3,9 +3,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Designs = () => {
+  const navigate = useNavigate();
     const columns = [
         {
           title: 'Name',
@@ -41,12 +44,16 @@ const Designs = () => {
     },[]);
     Designs.forEach((design)=>{
         design.key = design.id;
-        design.image = <img src={design.imgUrl} style={{height:'60px',width:'60px'}}/>
+        design.image = <img src={design.imgUrl} style={{height:'40px',width:'60px'}}/>
         design.modify = <Button type="primary" ghost style={{border:'none', fontSize:'20px'}}> <FontAwesomeIcon icon={faPenToSquare} /> </Button>
         design.delete = <Button type="primary" danger ghost style={{border:'none', fontSize:'20px'}} > <FontAwesomeIcon icon={faTrash} /> </Button>
     })
   return (
-    <div style={{display:'flex',flexDirection:'column',  justifyContent:'center'}}>
+    <div className='contentWithAdd'>
+    <div className='addButton' id='designAdd'>
+    <Button className='btn btn-primary' onClick={()=>navigate('/designs/addnew')}>Add New</Button>
+    </div>
+    <br/>
     <div >
     <Table columns={columns} dataSource={Designs} pagination={{ pageSize: 5 }} onChange={(num)=> console.log(num)} />
     </div>
