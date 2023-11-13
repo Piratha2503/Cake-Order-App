@@ -18,19 +18,19 @@ const items = [
     getItem('Occasions', 'sub2', <img src={cake} style={{width:'35px',height:'35px'}}/>, [
     getItem('Birthdays', '5'),
     getItem('Mothers Day', '6'),
-    getItem('Fathers Day', '6'),
-    getItem('Wedding/Reception', '6'),
-    getItem('Get Well Soon', '6'),
-    getItem('Christmas', '6'),
+    getItem('Fathers Day', '7'),
+    getItem('Wedding/Reception', '8'),
+    getItem('Get Well Soon', '9'),
+    getItem('Christmas', '10'),
   ]),
   {
     type: 'divider',
   },
     getItem('Cup Cakes', 'sub4', <img src={cake} style={{width:'35px',height:'35px'}}/>, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
-    getItem('Option 11', '11'),
-    getItem('Option 12', '12'),
+    getItem('Option 9', '11'),
+    getItem('Option 10', '12'),
+    getItem('Option 11', '13'),
+    getItem('Option 12', '14'),
   ]),];
 const SideMenu = () => {
   const onClick = (e) => {

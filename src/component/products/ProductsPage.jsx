@@ -5,26 +5,22 @@ import '../style/Style.css';
 import { Button } from 'react-bootstrap';
 
 function Products() {
-  const [images, setImages] = useState([]);
+  let [images, setImages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
 
   const showImages = async (num) => {
     const pagenum = num * pageSize;
-    const response = await axios.get(`http://localhost:8095/cake-orders/img`);
-    setImages(response.data);
+    const response = await axios.get(`http://localhost:8095/cake-orders/img`)
+                                .then(response=> setImages(response.data));
    
     setCurrentPage(num);
   };
-
+  
   useEffect(() => {
-   
     showImages(currentPage); 
   }, []);
-  for (let index = 0; index < images.length; index++) {
-    console.log(images[index].imgPath)
-    
-  }
+  images = images.filter((img) => img.view === "products")
   return (
     <div className='proDisplay' >
       <div className='imgDisplay'>

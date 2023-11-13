@@ -15,12 +15,12 @@ import Text from "./description";
 import DeliverOptions from "./deliverOptions";
 import Faqs from "./faqs";
 import RecentEvents from "./recentEvents";
-
 const MainView = () => {
+  
   return (
    
-    <div>
-      <div className="topDiv">Online Ordering Website</div>
+    <div style={{display:'flex',flexDirection:'column'}}>
+      <div className="topDiv">Welcome</div>
       <TabTop />
       <MyCarousel />
       <div className="review">

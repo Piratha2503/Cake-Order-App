@@ -1,25 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Carousel } from 'antd';
 import './style/slideshow.css'
 import img1 from './images/img1.jpg'
 import img2 from './images/img2.jpg'
 import img3 from './images/img3.jpg'
-
+import axios from 'axios';
+import { ImagesView } from './ImagesView';
 
 function MyCarousel() {
+ 
+let images = ImagesView()
+images = images.filter((img) => img.view === "slideShow")
+
   return (
     <div >
     <Carousel autoplay>
-      <div>
-      <a><img src={img1} alt='img' style={{height:'600px', width:'100%'}}/></a>
+    {images.map((myImage,index)=>(
+      <div key={index}>
+      <a><img src={myImage.imgUrl} alt={myImage.altText} style={{height:'600px', width:'100%'}}/></a>
       </div>
-      <div>
-      <a><img src={img2} alt='img' style={{height:'600px', width:'100%'}}/></a>
-      </div>
-      <div>
-      <a><img src={img3} alt='img' style={{height:'600px', width:'100%'}}/></a>
-      </div>
-   
+    ))}
     </Carousel>
     </div>
   )
