@@ -6,6 +6,7 @@ import com.ii.testautomation.DTO.Responses.DesignResponse;
 import com.ii.testautomation.Entities.Designs;
 import com.ii.testautomation.Services.DesignService;
 import com.ii.testautomation.repositories.DesignRepository;
+import com.ii.testautomation.utils.Constants;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -28,21 +28,25 @@ public class DesignServiceImplement implements DesignService {
     @Autowired
     private DesignRepository designRepository;
 
-    @Value("${reports.file.save.path}")
+    @Value("${products.file.save.path}")
     private String imagePath;
+    @Value("${frontPage.file.save.path}")
+    private String frontPagePath;
 
     @Override
     public void saveDesigns(DesignRequest designRequest) {
         Designs designs = new Designs();
         BeanUtils.copyProperties(designRequest,designs);
+        if (designRequest.getView() == null) designs.setView(Constants.Products);
         designRepository.save(designs);
     }
 
     @Override
-    public void uploadImage(Long id, MultipartFile imageFile)  {
+    public void uploadImage(Long id, MultipartFile imageFile) {
         Designs design = designRepository.findById(id).get();
+
        try{
-           File file = new File(imagePath+imageFile.getOriginalFilename());
+           File file = new File(imagePath +imageFile.getOriginalFilename());
            imageFile.transferTo(file);
            design.setImgPath(file.getPath());
            design.setName(imageFile.getOriginalFilename());
@@ -58,9 +62,6 @@ public class DesignServiceImplement implements DesignService {
         Designs design = designRepository.findByName(name).get();
         byte[] imgBytes = Files.readAllBytes((Path.of(design.getImgPath())));
         return imgBytes;
-
-
-
     }
 
     @Override
@@ -71,7 +72,6 @@ public class DesignServiceImplement implements DesignService {
               DesignResponse designResponse = new DesignResponse();
               BeanUtils.copyProperties(design,designResponse);
               if (design.getImgPath() != null) {
-                  //Path newPath = Path.of("http://localhost:8095/cake-orders/img/" + design.getName());
                   Path path = new File(imagePath + design.getName()).toPath();
                   byte[] imgBytes = Files.readAllBytes(path);
                   designResponseList.add(designResponse);

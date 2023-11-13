@@ -1,7 +1,6 @@
 package com.ii.testautomation.controllers;
 
 import com.ii.testautomation.DTO.Requests.DesignRequest;
-import com.ii.testautomation.DTO.Responses.OrdersResponse;
 import com.ii.testautomation.Services.DesignService;
 import com.ii.testautomation.utils.EndpointURI;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URISyntaxException;
-import java.util.List;
 
 @RestController
 @CrossOrigin
