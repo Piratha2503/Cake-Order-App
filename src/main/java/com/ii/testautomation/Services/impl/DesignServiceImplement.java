@@ -6,7 +6,6 @@ import com.ii.testautomation.DTO.Responses.DesignResponse;
 import com.ii.testautomation.Entities.Designs;
 import com.ii.testautomation.Services.DesignService;
 import com.ii.testautomation.repositories.DesignRepository;
-import com.ii.testautomation.utils.Constants;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,7 +36,6 @@ public class DesignServiceImplement implements DesignService {
     public void saveDesigns(DesignRequest designRequest) {
         Designs designs = new Designs();
         BeanUtils.copyProperties(designRequest,designs);
-        if (designRequest.getView() == null) designs.setView(Constants.Products);
         designRepository.save(designs);
     }
 
@@ -49,8 +47,7 @@ public class DesignServiceImplement implements DesignService {
            File file = new File(imagePath +imageFile.getOriginalFilename());
            imageFile.transferTo(file);
            design.setImgPath(file.getPath());
-           design.setName(imageFile.getOriginalFilename());
-           design.setImgUrl("http://localhost:8095/cake-orders/img/"+imageFile.getOriginalFilename());
+           design.setImgUrl("http://localhost:8095/cake-orders/img/"+id);
            designRepository.save(design);
        }catch (FileSystemNotFoundException | IOException e){
            System.out.println(e.toString());
@@ -58,8 +55,8 @@ public class DesignServiceImplement implements DesignService {
     }
 
     @Override
-    public byte[] viewImage(String name) throws IOException {
-        Designs design = designRepository.findByName(name).get();
+    public byte[] viewImage(Long id) throws IOException {
+        Designs design = designRepository.findById(id).get();
         byte[] imgBytes = Files.readAllBytes((Path.of(design.getImgPath())));
         return imgBytes;
     }
@@ -72,7 +69,7 @@ public class DesignServiceImplement implements DesignService {
               DesignResponse designResponse = new DesignResponse();
               BeanUtils.copyProperties(design,designResponse);
               if (design.getImgPath() != null) {
-                  Path path = new File(imagePath + design.getName()).toPath();
+                  Path path = new File(design.getImgPath()).toPath();
                   byte[] imgBytes = Files.readAllBytes(path);
                   designResponseList.add(designResponse);
               }

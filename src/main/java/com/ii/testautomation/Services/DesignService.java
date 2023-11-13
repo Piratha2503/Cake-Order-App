@@ -15,7 +15,7 @@ public interface DesignService {
 
     void uploadImage(Long id, MultipartFile imageFile) throws URISyntaxException, IOException;
 
-    byte[] viewImage(String name) throws IOException;
+    byte[] viewImage(Long id) throws IOException;
 
     List<DesignResponse> viewAllImages() throws IOException;
 }

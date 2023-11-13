@@ -20,8 +20,10 @@ public class DesignsController {
 
     @PostMapping(EndpointURI.DESIGNS)
     public ResponseEntity<Object> saveDesigns(@RequestBody DesignRequest designRequest) {
+
         designService.saveDesigns(designRequest);
         return ResponseEntity.ok(designRequest);
+
 
     }
     @PostMapping("images/{id}")
@@ -34,10 +36,10 @@ public class DesignsController {
     public ResponseEntity<Object> viewAllImage() throws IOException {
             return ResponseEntity.ok(designService.viewAllImages());
     }
-    @GetMapping("img/{name}")
-    public ResponseEntity<Object> viewImage(@PathVariable String name) throws IOException {
+    @GetMapping("img/{id}")
+    public ResponseEntity<Object> viewImage(@PathVariable Long id) throws IOException {
         return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG)
-                .body(designService.viewImage(name));
+                .body(designService.viewImage(id));
     }
 
 }
