@@ -5,6 +5,7 @@ import MyFooter from './MyFooter'
 import SideBar from './SideBar'
 import { BrowserRouter as Router } from 'react-router-dom';
 import MainContents from './MainContents'
+import { Border } from 'react-bootstrap-icons'
 function Main() {
   return (
     <Router>
@@ -16,7 +17,7 @@ function Main() {
     <div>
     <TopBar/>
     </div>
-    <div className='content'>
+    <div className='content' >
     <div className='mycontent'>
     <MainContents/>
     </div>

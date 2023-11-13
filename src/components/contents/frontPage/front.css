@@ -1,0 +1,18 @@
+.mainSlide{
+border: 1px solid black;
+height: 85vh;
+width: 100%;
+display: flex;
+justify-content: space-around;
+padding-top: 1.25%;
+}
+.imgUpload{
+    border: 1px solid blueviolet;
+    width: 48%;
+    height: 80vh;
+}
+.formDetails{
+    border: 1px solid blueviolet;
+    width: 48%;
+    height: 80vh;    
+}

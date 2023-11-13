@@ -15,12 +15,16 @@ const Designs = () => {
           dataIndex: 'name'
         },
         {
-            title: 'Image',
-            dataIndex: 'image'
-          },
+          title: 'Image',
+          dataIndex: 'image'
+        },
+        {
+          title: 'Price',
+          dataIndex: 'price'
+        },
           {
-            title: 'Price',
-            dataIndex: 'price'
+            title: 'Category',
+            dataIndex: 'view'
           },
           {
             title: 'Modify',
@@ -44,18 +48,18 @@ const Designs = () => {
     },[]);
     Designs.forEach((design)=>{
         design.key = design.id;
-        design.image = <img src={design.imgUrl} style={{height:'40px',width:'60px'}}/>
+        design.image = <img src={design.imgUrl} style={{height:'35px',width:'60px'}}/>
         design.modify = <Button type="primary" ghost style={{border:'none', fontSize:'20px'}}> <FontAwesomeIcon icon={faPenToSquare} /> </Button>
         design.delete = <Button type="primary" danger ghost style={{border:'none', fontSize:'20px'}} > <FontAwesomeIcon icon={faTrash} /> </Button>
     })
   return (
     <div className='contentWithAdd'>
     <div className='addButton' id='designAdd'>
-    <Button className='btn btn-primary' onClick={()=>navigate('/designs/addnew')}>Add New</Button>
+    <Button className='btn btn-info' onClick={()=>navigate('/designs/addEdit')}>Add / Edit</Button>
     </div>
     <br/>
-    <div >
-    <Table columns={columns} dataSource={Designs} pagination={{ pageSize: 5 }} onChange={(num)=> console.log(num)} />
+    <div>
+    <Table columns={columns} dataSource={Designs} pagination={{ pageSize: 5 }} />
     </div>
     </div>
   )
