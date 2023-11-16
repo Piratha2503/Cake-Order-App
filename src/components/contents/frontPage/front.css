@@ -10,9 +10,11 @@ padding-top: 1.25%;
     border: 1px solid blueviolet;
     width: 48%;
     height: 80vh;
+    padding-top: 5%;
 }
 .formDetails{
     border: 1px solid blueviolet;
     width: 48%;
-    height: 80vh;    
+    height: 80vh;
+    padding-top: 5%;    
 }

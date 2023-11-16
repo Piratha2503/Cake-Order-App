@@ -38,9 +38,9 @@ const Designs = () => {
     const [Designs, setDesigns] = useState([]);
 
     const getDesigns = async ()=>{
-        const Designs = await axios.get("http://localhost:8095/cake-orders/img")
-                        .then(response=>{setDesigns(response.data);
-                        console.log(response.data)})
+           const Designs = await axios.get("http://localhost:8095/cake-orders/img")
+                         .then(response=>{setDesigns(response.data);
+                         console.log(response.data)})
     }
 
     useEffect(()=>{

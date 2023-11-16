@@ -12,6 +12,9 @@ function MainContents() {
         <Routes>
         <Route path="/" element={ <Orders/>} />
           <Route path="/clients" element={<div>
+            <Orders/>
+          </div>} />
+          <Route path="/orders" element={<div>
             <Clients/>
           </div>} />
           <Route path="/designs" element={<div>
