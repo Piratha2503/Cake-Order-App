@@ -19,17 +19,12 @@ const finish = async (e)=>{
     "price":Price,
     "view":Category
   } 
-
-  const saveDetails = async ()=>{
-      const Res = await axios.post('http://localhost:8095/cake-orders/api/v1/designs',entry)
-                                  .then(response=>console.log(response.data))
-  }
- 
   console.log("Name:-"+Name)
   console.log("Price:- "+Price)
   console.log("Category:-"+Category)
+  const Res = await axios.post('http://localhost:8095/cake-orders/api/v1/designs',entry)
+  .then(response=>console.log(response.data))
 
-  saveDetails();
 }
 
 export function Slides() {
@@ -84,7 +79,7 @@ export function Slides() {
       <Input type='number'/>
       </Form.Item>
       <Form.Item label=' ' labelCol={{span:10}}>
-      <Button variant="primary" htmltype='submit'>Save</Button>
+      <button variant="primary" htmltype='submit'>Save</button>
       </Form.Item>
       </Form>
       </div>
