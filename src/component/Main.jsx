@@ -15,8 +15,11 @@ import Text from "./description";
 import DeliverOptions from "./deliverOptions";
 import Faqs from "./faqs";
 import RecentEvents from "./recentEvents";
+import axios from "axios";
+
+
 const MainView = () => {
-  
+  const MyImages = [1,2,3];
   return (
    
     <div style={{display:'flex',flexDirection:'column'}}>
@@ -71,6 +74,7 @@ const MainView = () => {
       </div>
       <br/>
         <BuyNow/>
+        
         <br/>
         <div className="howDiv">
         <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
@@ -135,3 +139,21 @@ const MainView = () => {
 }
 
 export default MainView;
+/*
+let [images, setImages] = useState([
+
+      
+  ]);
+
+  const showImages = async () => {
+    
+     const response = await axios.get(`http://localhost:8095/cake-orders/img`)
+                                 .then(response=> setImages(response.data));
+   };  
+   useEffect(() => {
+     showImages(); 
+   }, []);
+
+
+images.map((image)=>MyImages.push(image))
+*/

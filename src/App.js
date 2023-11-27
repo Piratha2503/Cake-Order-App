@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes,Switch } from 'react-router-dom';
-import MainPage from './component/Main'; // Import your TabTop component here // Import your other components here
+import MainPage from './component/Main';
 import Products from './component/products/ProductMainPage';
 
 function App() {

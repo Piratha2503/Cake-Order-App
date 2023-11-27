@@ -3,7 +3,9 @@ import './style/mystyle.css'
 import { Row } from 'antd'
 function Text() {
   return (
+    
     <div className='description'>
+   
       <h3  className='descriptionText' style={{color:'#df1515'}}> Niru Cakes - Your Premier Cake Ordering Destination in Northern Province, Sri Lanka </h3>
       <br/>
       <h5 style={{textAlign:'justify',color:'#155e11'}}>Welcome to Niru Cakes, the Northern Province's foremost cake ordering destination, 

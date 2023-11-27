@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from './imgs/myLogo.jpg'
 function TabTop() {
   return (
-    <>
+    <div>
       <Navbar expand="lg" className="bg-body-tertiary">
       <Container className='myContainer'>
         <Navbar.Brand href="#home"><img src={logo} style={{height:'50px',width:'200px'}}></img></Navbar.Brand>
@@ -32,7 +32,7 @@ function TabTop() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </>
+    </div>
   );
 }
 

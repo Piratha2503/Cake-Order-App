@@ -1,20 +1,28 @@
+import React, { useEffect, useState } from 'react';
+import MyCarousel from './MyCarousel';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import BuyNow from './buyNow';
+import BestSeller from './bestSeller';
 
 export function ImagesView() {
-    let [images, setImages] = useState([]);
- 
-    const showImages = async () => {
-      
-       const response = await axios.get(`http://localhost:8095/cake-orders/img`)
-                                   .then(response=> setImages(response.data));
-     };  
-     useEffect(() => {
-       showImages(); 
-     }, []);
-const MyImages = [];
+  const [images, setImages] = useState([]);
+  const fetchImages = async () => {
+    try {
+      const response = await axios.get('http://localhost:8095/cake-orders/img');
+      setImages(response.data);
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  };
+  useEffect(() => {
 
-images.map((image)=>MyImages.push(image))
-  return MyImages
+    fetchImages();
+  }, []);
+
+  const myImages = [];
+
+  images.map(img=>myImages.push(img))
+
+  return myImages;
 }
 
