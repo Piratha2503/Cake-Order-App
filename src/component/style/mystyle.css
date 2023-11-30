@@ -48,9 +48,10 @@ justify-content: space-around;
 }
 .delivery{
     
-    height: 150px;
-    width: 25%;
+    height: 275px;
+    width: 22%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .deldescription{
@@ -136,7 +137,26 @@ margin-left: 5%;
     flex-direction: column;
     margin-left: 8%;
     padding: 1%;
-   }    
+   }   
+   
+  #specialPro{
+    height:80vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  } 
+  .specialpros{
+    padding: 1%;
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #subSpecialpros{
+    border: 1px solid blueviolet;
+    width: 90%;
+  }
    .bestSell{
    
     width: 48%;

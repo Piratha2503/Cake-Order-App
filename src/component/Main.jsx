@@ -16,13 +16,14 @@ import DeliverOptions from "./deliverOptions";
 import Faqs from "./faqs";
 import RecentEvents from "./recentEvents";
 import axios from "axios";
+import Test2 from "./Test2";
 
 
 const MainView = () => {
   const MyImages = [1,2,3];
   return (
    
-    <div style={{display:'flex',flexDirection:'column'}}>
+    <div style={{display:'flex',flexDirection:'column',columnGap:'2em'}}>
       <div className="topDiv">Welcome</div>
       <TabTop />
       <MyCarousel />
@@ -46,16 +47,15 @@ const MainView = () => {
             <h2 className="howItWork">_____</h2>
           </div>
           <div>
-            <h2 style={{ marginTop: "15%" }}> HOW IT WORKS</h2>
+            <h2 style={{ marginTop: "15%" }}> How To Order</h2>
           </div>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
         </Row>
       </div>
-      
-      <Delivery />
-      <div style={{ marginTop: "3%" }}>
+      <Delivery/>
+      <div style={{ marginTop: "5%" }}>
         <img src={deliveryImage} style={{ width: "100%", height: "600px" }}></img>
       </div>
     
@@ -74,29 +74,16 @@ const MainView = () => {
       </div>
       <br/>
         <BuyNow/>
-        
         <br/>
-        <div className="howDiv">
-        <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
-          <div>
-            <h2 className="howItWork">_____</h2>
-          </div>
-          <div>
-            <h2 style={{ marginTop: "16%" }}> BEST SELLERS</h2>
-          </div>
-          <div>
-            <h2 className="howItWork">_____</h2>
-          </div>
-        </Row>
-      </div>
-<BestSeller/>
+           
+<Test2/>
 <div className="howDiv">
         <Row style={{display:'flex',justifyContent:'center',columnGap:'1em'}}>
           <div>
             <h2 className="howItWork">_____</h2>
           </div>
           <div>
-            <h2 style={{ marginTop: "12%" }}> FEATURE PRODUCTS</h2>
+            <h2 style={{ marginTop: "12%" }}> New Arrivals</h2>
           </div>
           <div>
             <h2 className="howItWork">_____</h2>
