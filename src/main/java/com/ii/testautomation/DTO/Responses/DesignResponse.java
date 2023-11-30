@@ -12,4 +12,5 @@ public class DesignResponse {
     private String imgUrl;
     private Double price;
     private String view;
+    private String description;
 }

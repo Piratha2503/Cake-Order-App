@@ -8,7 +8,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface DesignRepository extends JpaRepository<Designs,Long> {
-       List<Designs> findAllByOrderByCreatedAt();
+   List<Designs> findAllByOrderByCreatedAt();
 
     Optional<Designs> findByName(String name);
+
+    Designs findFirstByOrderByCreatedAtDesc();
 }

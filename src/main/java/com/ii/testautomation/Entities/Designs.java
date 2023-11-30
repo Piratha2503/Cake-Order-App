@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.net.URL;
 
 @Entity
 @Getter
@@ -21,5 +20,6 @@ public class Designs extends DateAudit {
     private String imgUrl;
     private String view = Constants.Products.toString();
     private Double price;
-
+    @Column(length = 1500)
+    private String description;
 }

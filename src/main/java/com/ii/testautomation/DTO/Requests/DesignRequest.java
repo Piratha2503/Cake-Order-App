@@ -10,4 +10,5 @@ public class DesignRequest {
     private String name;
     private Double price;
     private String view;
+    private String description;
 }

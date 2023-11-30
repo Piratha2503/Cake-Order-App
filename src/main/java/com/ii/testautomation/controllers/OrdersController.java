@@ -2,6 +2,7 @@ package com.ii.testautomation.controllers;
 
 import com.ii.testautomation.CommonResponses.PaginatedContentResponse;
 import com.ii.testautomation.DTO.Requests.OrdersRequest;
+import com.ii.testautomation.DTO.Responses.DesignResponse;
 import com.ii.testautomation.DTO.Search.OrdersSearch;
 import com.ii.testautomation.Services.OrdersService;
 import com.ii.testautomation.enums.ResponsingStatus;

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -33,14 +34,19 @@ public class DesignServiceImplement implements DesignService {
     private String frontPagePath;
 
     @Override
-    public void saveDesigns(DesignRequest designRequest) {
+    public DesignResponse saveDesigns(DesignRequest designRequest) {
         Designs designs = new Designs();
         BeanUtils.copyProperties(designRequest,designs);
         designRepository.save(designs);
+
+        DesignResponse designResponse = new DesignResponse();
+        Designs design = designRepository.findFirstByOrderByCreatedAtDesc();
+        BeanUtils.copyProperties(design,designResponse);
+        return designResponse;
     }
 
     @Override
-    public void uploadImage(Long id, MultipartFile imageFile) {
+    public void uploadImage(Long id, MultipartFile imageFile) throws NullPointerException, MultipartException {
         Designs design = designRepository.findById(id).get();
 
        try{
@@ -74,6 +80,7 @@ public class DesignServiceImplement implements DesignService {
                   designResponseList.add(designResponse);
               }
           }
+
         return designResponseList;
     }
 }

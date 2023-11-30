@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface DesignService {
 
-    void saveDesigns(DesignRequest designRequest);
+    DesignResponse saveDesigns(DesignRequest designRequest);
 
     void uploadImage(Long id, MultipartFile imageFile) throws URISyntaxException, IOException;
 

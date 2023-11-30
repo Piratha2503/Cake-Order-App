@@ -13,18 +13,18 @@ public class PaginatedContentResponse<T> extends ContentResponses<T>
 {
     private Map<String, T> result = new HashMap<>();
 
-    public PaginatedContentResponse(String key, T dto, String status, String statusCode, String message)
+    public PaginatedContentResponse(String key, T response, String status, String statusCode, String message)
     {
-        super(status, dto, statusCode, message, message);
-        result.put(key, dto);
+        super(key, response, status, statusCode, message);
+        result.put(key, response);
     }
 
     private Pagination pagination;
 
-    public PaginatedContentResponse(String key, T dto, String status, String statusCode, String message, Pagination pagination)
+    public PaginatedContentResponse(String key, T response, String status, String statusCode, String message, Pagination pagination)
     {
-        super(key, dto, status, statusCode, message);
-        result.put(key, dto);
+        super(key, response, status, statusCode, message);
+        result.put(key, response);
         this.pagination = pagination;
     }
 
